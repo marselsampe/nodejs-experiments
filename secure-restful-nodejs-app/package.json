@@ -1,7 +1,7 @@
 {
   "name": "secure-restful-nodejs-app",
   "version": "1.0.0",
-  "description": "nodejs restful api build with token-based-authentication to authenticate and authorize the client",
+  "description": "nodejs restful api with token-based-authentication to authenticate and authorize the client",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
