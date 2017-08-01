@@ -6,13 +6,13 @@ var items = {
 
   getDetail: function (req, res) {
     var id = req.params.id;
-    var item = data[0];
+    var item = data[id];
     res.json(item);
   },
 
   create: function (req, res) {
     var newItem = req.body;
-    data.push(newitem);
+    data.push(newItem);
     res.json(newItem);
   },
 

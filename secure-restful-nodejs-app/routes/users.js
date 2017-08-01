@@ -1,27 +1,27 @@
 var users = {
  
   getAll: function(req, res) {
-    var allusers = data;
-    res.json(allusers);
+    var allUsers = data;
+    res.json(allUsers);
   },
  
   getDetail: function(req, res) {
     var id = req.params.id;
-    var user = data[0];
+    var user = data[id];
     res.json(user);
   },
  
   create: function(req, res) {
-    var newuser = req.body;
-    data.push(newuser);
-    res.json(newuser);
+    var newUser = req.body;
+    data.push(newUser);
+    res.json(newUser);
   },
  
   update: function(req, res) {
-    var updateuser = req.body;
+    var updateUser = req.body;
     var id = req.params.id;
-    data[id] = updateuser;
-    res.json(updateuser);
+    data[id] = updateUser;
+    res.json(updateUser);
   },
  
   delete: function(req, res) {
