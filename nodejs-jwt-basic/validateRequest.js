@@ -2,12 +2,12 @@ function validateRequest(req, res, next) {
     let jwt = require('jwt-simple');
     let authenticateManager = require('./authenticateManager');
 
-    let token = (req.body && req.body.token);
+    let access_token = (req.body && req.body.access_token);
     let username = (req.body && req.body.username);
-    if (token && username) {
+    if (access_token && username) {
         let isUserValid = authenticateManager.validateUser(username);
         if (isUserValid) {
-            let isTokenValid = authenticateManager.validateToken(token, username);
+            let isTokenValid = authenticateManager.validateToken(access_token, username);
             if (isTokenValid) {
                 next();
             } else {
